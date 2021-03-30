@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import MaskInput from 'react-maskinput';
+import styled from 'styled-components';
+
+const MaskedInput = styled(MaskInput)`
+  border-radius: 5px;
+  border-color: rgb(219, 112, 147);
+	min-width: 200px;
+	font-size: 1.15em;
+`;
 
 const AdvanceMaskInput = () => {
 	const [ mask, setMask ] = useState('0000-0000-0000-0000');
@@ -21,7 +29,7 @@ const AdvanceMaskInput = () => {
 	};
 
 	return (
-		<MaskInput
+		<MaskedInput
 		  alwaysShowMask
 			maskString="XXXX-XXXX-XXXX-XXXX"
 			onChange={onChange}
