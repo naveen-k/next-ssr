@@ -5,7 +5,7 @@ import { GTMPageViewEvent } from '../../gtm/events';
 
 const Home = () => {
 	useEffect(() => {
-		GTMPageViewEvent("sap-home");		//DataEvent('PageDataLayer', `Total Post - ${postsList.data.length}`);
+		GTMPageViewEvent("spa-home");		//DataEvent('PageDataLayer', `Total Post - ${postsList.data.length}`);
 	});
 	return (
 		<div>
@@ -16,7 +16,7 @@ const Home = () => {
 
 const About = () => {
 	useEffect(() => {
-		GTMPageViewEvent("sap-about");
+		GTMPageViewEvent("spa-about");
 	});
 	return (
 		<div>
