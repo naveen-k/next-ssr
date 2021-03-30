@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const MaskedInput = styled(MaskInput)`
   border-radius: 5px;
   border-color: rgb(219, 112, 147);
-	min-width: 200px;
-	font-size: 1.15em;
+	min-width: 220px;
+	font-size: 1.2em;
 `;
 
 const AdvanceMaskInput = () => {
@@ -17,6 +17,11 @@ const AdvanceMaskInput = () => {
 	const onChange = (e) => {
 		var outString = e.target.value.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
 		setCardNumber(outString);
+		const trailingCharsIntactCount = 4;
+		let str =
+			'x'.repeat(cardNumber.length - trailingCharsIntactCount) + cardNumber.slice(-trailingCharsIntactCount);
+
+			setCardNumberDisplay(str);
 	};
 	const onBlur = (e) => {
 		const trailingCharsIntactCount = 4;

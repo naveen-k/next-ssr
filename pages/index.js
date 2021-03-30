@@ -34,6 +34,11 @@ export default function Home() {
 								<a>Start Exploring [SSR]</a>
 							</Link>
 						</Button>
+						<Button color="primary" variant="outlined">
+							<Link href="/spa">
+								<a>SPA</a>
+							</Link>
+						</Button>
 					</Grid>
 					<AdvanceMaskInput/>
 				</Grid>
