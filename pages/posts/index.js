@@ -7,6 +7,11 @@ const Posts = ({ postsList }) => {
 	useEffect(() => {
 		DataEvent('PageDataLayer', `Total Post - ${postsList.data.length}`);
 	});
+
+	if(window!=undefined){
+		console.log(window);
+		window.test();
+	}
 	return postsList.data.map((post) => {
 		return <PostsList {...{ post }} />;
 	});
