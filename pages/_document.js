@@ -24,16 +24,7 @@ export default class MyDocument extends Document {
 						}}
 					/>
 					<script />
-
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `function test() {
-								console.log('Hiiiiii');
-							}
-							`
-						}}
-					/>
-					<script />
+					<script src="https://cdn.jsdelivr.net/gh/naveen-k/next-ssr/lib/hello.js"></script>
 				</Head>
 				<body>
 					<Main />
