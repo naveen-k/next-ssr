@@ -6,11 +6,10 @@ import { DataEvent } from '../../gtm/events.js';
 const Posts = ({ postsList }) => {
 	useEffect(() => {
 		DataEvent('PageDataLayer', `Total Post - ${postsList.data.length}`);
+		if(window!=undefined){
+			window.test();
+		}
 	});
-
-	if(window!=undefined){
-		window.test();
-	}
 	return postsList.data.map((post) => {
 		return <PostsList {...{ post }} />;
 	});
