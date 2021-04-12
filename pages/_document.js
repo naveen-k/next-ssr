@@ -24,7 +24,11 @@ export default class MyDocument extends Document {
 						}}
 					/>
 					<script />
-					<script src="https://cdn.jsdelivr.net/gh/naveen-k/next-ssr/lib/hello.js"></script>
+					{process.env.TEST_KEY && process.env.TEST_KEY === 'HI' ? (
+						<script src="/static/hi.js" />
+					) : (
+						<script src="/static/hello.js" />
+					)}
 				</Head>
 				<body>
 					<Main />
